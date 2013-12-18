@@ -43,7 +43,9 @@
     [clj-campfire "2.2.0"]
     [less-awful-ssl "0.1.1"]
     [clj-nsca "0.0.3"]
+    ;; extra packages
     [org.jruby/jruby-core "1.7.8"]
+    [com.novemberain/monger "1.7.0-beta1"]
   ]
   :plugins [[codox "0.6.1"]
             [lein-rpm "0.0.5"]]
