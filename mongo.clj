@@ -26,6 +26,15 @@
 ;; (mgc/insert-batch "document" [{ :first_name "John" :last_name "Lennon" }
 ;;                               { :first_name "Paul" :last_name "McCartney" }])
 
+;; 4. from http://riemann.io/howto.html
+;; (where (service "foo")
+;;  (fn [event]
+;;    ; Log a message
+;;    (info "I got an event:" event)
+;;
+;;    ; Then extract some fields and insert them into a DB.
+;;    (save-to-my-database (:description event) (:metric event))))
+
 (defn mongo-save-event 
   ([coll]
      (fn [event] (mgc/insert coll event)))
